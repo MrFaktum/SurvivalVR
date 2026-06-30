@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://8oycbieeeewn"]
+
+[ext_resource type="Script" uid="uid://c3o61xg5garho" path="res://scn/main/day_night_cycle.gd" id="1_y4fp4"]
+[ext_resource type="PackedScene" uid="uid://x6jl3rpbcy0u" path="res://scn/player/player.tscn" id="2_48jxh"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_y4fp4"]
+
+[sub_resource type="Sky" id="Sky_y4fp4"]
+sky_material = SubResource("ProceduralSkyMaterial_y4fp4")
+
+[sub_resource type="Environment" id="Environment_lpmh6"]
+background_mode = 2
+sky = SubResource("Sky_y4fp4")
+ambient_light_source = 2
+ambient_light_color = Color(0.09803922, 0.09803922, 0.4392157, 1)
+ambient_light_energy = 0.7
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wvhbo"]
+albedo_color = Color(0.13333334, 0.54509807, 0.13333334, 1)
+
+[node name="Main" type="Node3D" unique_id=1243160325]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=946037588]
+environment = SubResource("Environment_lpmh6")
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=852944762]
+transform = Transform3D(0.7071067, -0.49999994, 0.49999994, 0, 0.7071067, 0.7071067, -0.7071067, -0.49999994, 0.49999994, 0, 2, 0)
+shadow_enabled = true
+script = ExtResource("1_y4fp4")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=2145298981]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+use_collision = true
+size = Vector3(20, 1, 20)
+material = SubResource("StandardMaterial3D_wvhbo")
+
+[node name="Player" parent="." unique_id=1118128489 instance=ExtResource("2_48jxh")]
