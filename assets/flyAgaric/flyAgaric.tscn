@@ -1,25 +1,43 @@
 [gd_scene format=3 uid="uid://cmvrrnevcxysj"]
 
 [ext_resource type="Script" uid="uid://bfrlpbsqg5lqr" path="res://addons/godot-xr-tools/objects/pickable.gd" id="1_cdem8"]
-[ext_resource type="ArrayMesh" uid="uid://qfwhqwtckkxe" path="res://assets/flyAgaric/.res" id="2_w26b6"]
-[ext_resource type="ArrayMesh" uid="uid://ccwdr7gplxcxe" path="res://assets/flyAgaric/skirtFlyAgaric.res" id="3_hfo4c"]
+[ext_resource type="Texture2D" uid="uid://dqyoetprjrs3p" path="res://assets/flyAgaric/flyAgaric_1.png" id="2_nl45v"]
+[ext_resource type="ArrayMesh" uid="uid://148fu5whw8ue" path="res://assets/flyAgaric/.res" id="2_w26b6"]
+[ext_resource type="ArrayMesh" uid="uid://3wact56ao6hp" path="res://assets/flyAgaric/skirtFlyAgaric.res" id="3_hfo4c"]
+[ext_resource type="Script" uid="uid://bq36ppo3qmjo" path="res://scripts/food_data.gd" id="4_hfo4c"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wvhbo"]
 height = 2.2329102
 
-[node name="FlyAgaric" type="RigidBody3D" unique_id=903399737]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y4kl4"]
+albedo_texture = ExtResource("2_nl45v")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qiwew"]
+albedo_texture = ExtResource("2_nl45v")
+
+[node name="FlyAgaric" type="RigidBody3D" unique_id=903399737 groups=["Edible"]]
+collision_layer = 5
 freeze = true
 script = ExtResource("1_cdem8")
+release_mode = 0
 metadata/_custom_type_script = "uid://bfrlpbsqg5lqr"
 
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=898563128]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.1135748, 0)
+shape = SubResource("CapsuleShape3D_wvhbo")
+
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=232485016]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2329488, 0)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.124751374, 0)
+material_override = SubResource("StandardMaterial3D_y4kl4")
 mesh = ExtResource("2_w26b6")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=772604198]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2329488, 0)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.124751374, 0)
+material_override = SubResource("StandardMaterial3D_qiwew")
 mesh = ExtResource("3_hfo4c")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=898563128]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1164551, 0)
-shape = SubResource("CapsuleShape3D_wvhbo")
+[node name="FoodData" type="Node" parent="." unique_id=228651190]
+script = ExtResource("4_hfo4c")
+food_value = 5.0
+poison_value = 15.0
+crumb_color = Color(0.88235295, 0.02745098, 0, 1)

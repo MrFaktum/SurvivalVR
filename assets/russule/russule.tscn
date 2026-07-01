@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bfnnyx8m85yo8" path="res://assets/russule/russule_2.png" id="2_s0hu1"]
 [ext_resource type="Texture2D" uid="uid://ni6m2x7tc0pj" path="res://assets/russule/russule_1.png" id="3_iuvps"]
 [ext_resource type="ArrayMesh" uid="uid://s68ks3nq6gd0" path="res://assets/russule/russule.res" id="4_ao74u"]
+[ext_resource type="Script" uid="uid://bq36ppo3qmjo" path="res://scripts/food_data.gd" id="6_iuvps"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wvhbo"]
 radius = 0.056640625
@@ -16,9 +17,11 @@ roughness_texture = ExtResource("3_iuvps")
 normal_enabled = true
 normal_texture = ExtResource("2_s0hu1")
 
-[node name="Russule" type="RigidBody3D" unique_id=668914891]
+[node name="Russule" type="RigidBody3D" unique_id=668914891 groups=["Edible"]]
+collision_layer = 5
 freeze = true
 script = ExtResource("1_s0hu1")
+release_mode = 0
 metadata/_custom_type_script = "uid://bfrlpbsqg5lqr"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1784685126]
@@ -29,3 +32,8 @@ shape = SubResource("CapsuleShape3D_wvhbo")
 transform = Transform3D(0.025, 0, 0, 0, -1.0927848e-09, 0.025, 0, -0.025, -1.0927848e-09, 0, 0.015313387, 0)
 material_override = SubResource("StandardMaterial3D_n6i10")
 mesh = ExtResource("4_ao74u")
+
+[node name="FoodData" type="Node" parent="." unique_id=1112971461]
+script = ExtResource("6_iuvps")
+food_value = 10.0
+crumb_color = Color(0.6901961, 0.44705883, 0.14509805, 1)

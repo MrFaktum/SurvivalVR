@@ -16,8 +16,10 @@ normal_enabled = true
 normal_texture = ExtResource("2_vjc03")
 
 [node name="CoconutWhole" type="RigidBody3D" unique_id=1794778159]
+collision_layer = 5
 freeze = true
 script = ExtResource("1_vjc03")
+release_mode = 0
 metadata/_custom_type_script = "uid://bfrlpbsqg5lqr"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1288070357]

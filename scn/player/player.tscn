@@ -3,10 +3,20 @@
 [ext_resource type="PackedScene" uid="uid://bl2nuu3qhlb5k" path="res://addons/godot-xr-tools/functions/movement_direct.tscn" id="1_m1arm"]
 [ext_resource type="Script" uid="uid://c82604t5mygdy" path="res://scn/player/player.gd" id="1_ufis8"]
 [ext_resource type="PackedScene" uid="uid://b4ysuy43poobf" path="res://addons/godot-xr-tools/functions/function_pickup.tscn" id="2_tcdqb"]
+[ext_resource type="Script" uid="uid://dhfjspc5ppxds" path="res://scn/player/mouth.gd" id="3_ufis8"]
 [ext_resource type="PackedScene" uid="uid://b6bk2pj8vbj28" path="res://addons/godot-xr-tools/functions/movement_turn.tscn" id="4_7kq1b"]
 [ext_resource type="PackedScene" uid="uid://b4kad2kuba1yn" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_hand_low.tscn" id="4_ufis8"]
 [ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="5_7kq1b"]
 [ext_resource type="PackedScene" uid="uid://l2n30mpbkdyw" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_hand_low.tscn" id="7_pbaik"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_wvhbo"]
+radius = 0.07
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7kq1b"]
+vertex_color_use_as_albedo = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_7kq1b"]
+size = Vector3(0.01, 0.01, 0.01)
 
 [node name="Player" type="XROrigin3D" unique_id=1118128489]
 script = ExtResource("1_ufis8")
@@ -14,6 +24,26 @@ script = ExtResource("1_ufis8")
 [node name="PlayerBody" parent="." unique_id=42147687 instance=ExtResource("5_7kq1b")]
 
 [node name="Head" type="XRCamera3D" parent="." unique_id=1282443324]
+
+[node name="Mouth" type="Area3D" parent="Head" unique_id=181268749]
+collision_layer = 0
+collision_mask = 7
+script = ExtResource("3_ufis8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Head/Mouth" unique_id=1730150991]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.06663338, -0.033475183)
+shape = SubResource("SphereShape3D_wvhbo")
+
+[node name="Crumbs" type="CPUParticles3D" parent="Head/Mouth" unique_id=1034525252]
+material_override = SubResource("StandardMaterial3D_7kq1b")
+emitting = false
+amount = 15
+one_shot = true
+explosiveness = 0.8
+mesh = SubResource("BoxMesh_7kq1b")
+direction = Vector3(0, -1, -1)
+gravity = Vector3(0, -4, 0)
+initial_velocity_max = 1.5
 
 [node name="LeftHand" type="XRController3D" parent="." unique_id=180315418]
 tracker = &"left_hand"

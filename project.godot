@@ -29,9 +29,13 @@ window/stretch/aspect="expand"
 
 enabled=PackedStringArray("res://addons/godot-xr-tools/plugin.cfg")
 
+[global_group]
+
+Edible="То что можно съесть"
+
 [godot_xr_tools]
 
-player/standard_height=1.7
+player/standard_height=1.5
 
 [physics]
 
