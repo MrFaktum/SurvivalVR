@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cmvrrnevcxysj"]
+
+[ext_resource type="Script" uid="uid://bfrlpbsqg5lqr" path="res://addons/godot-xr-tools/objects/pickable.gd" id="1_cdem8"]
+[ext_resource type="ArrayMesh" uid="uid://qfwhqwtckkxe" path="res://assets/flyAgaric/.res" id="2_w26b6"]
+[ext_resource type="ArrayMesh" uid="uid://ccwdr7gplxcxe" path="res://assets/flyAgaric/skirtFlyAgaric.res" id="3_hfo4c"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wvhbo"]
+height = 2.2329102
+
+[node name="FlyAgaric" type="RigidBody3D" unique_id=903399737]
+freeze = true
+script = ExtResource("1_cdem8")
+metadata/_custom_type_script = "uid://bfrlpbsqg5lqr"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=232485016]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2329488, 0)
+mesh = ExtResource("2_w26b6")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=772604198]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2329488, 0)
+mesh = ExtResource("3_hfo4c")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=898563128]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1164551, 0)
+shape = SubResource("CapsuleShape3D_wvhbo")

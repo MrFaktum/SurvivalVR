@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://djhub8k1x5mx7"]
+
+[ext_resource type="Texture2D" uid="uid://bd5bjrjmfq6ou" path="res://assets/russule/russule_0.png" id="1_6g5a0"]
+[ext_resource type="Script" uid="uid://bfrlpbsqg5lqr" path="res://addons/godot-xr-tools/objects/pickable.gd" id="1_s0hu1"]
+[ext_resource type="Texture2D" uid="uid://bfnnyx8m85yo8" path="res://assets/russule/russule_2.png" id="2_s0hu1"]
+[ext_resource type="Texture2D" uid="uid://ni6m2x7tc0pj" path="res://assets/russule/russule_1.png" id="3_iuvps"]
+[ext_resource type="ArrayMesh" uid="uid://s68ks3nq6gd0" path="res://assets/russule/russule.res" id="4_ao74u"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wvhbo"]
+radius = 0.056640625
+height = 0.2659607
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n6i10"]
+albedo_texture = ExtResource("1_6g5a0")
+roughness_texture = ExtResource("3_iuvps")
+normal_enabled = true
+normal_texture = ExtResource("2_s0hu1")
+
+[node name="Russule" type="RigidBody3D" unique_id=668914891]
+freeze = true
+script = ExtResource("1_s0hu1")
+metadata/_custom_type_script = "uid://bfrlpbsqg5lqr"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1784685126]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.13248563, 0)
+shape = SubResource("CapsuleShape3D_wvhbo")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1764316913]
+transform = Transform3D(0.025, 0, 0, 0, -1.0927848e-09, 0.025, 0, -0.025, -1.0927848e-09, 0, 0.015313387, 0)
+material_override = SubResource("StandardMaterial3D_n6i10")
+mesh = ExtResource("4_ao74u")

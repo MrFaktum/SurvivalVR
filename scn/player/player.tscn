@@ -1,23 +1,17 @@
 [gd_scene format=3 uid="uid://x6jl3rpbcy0u"]
 
-[ext_resource type="PackedScene" uid="uid://bq86r4yll8po" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_fullglove_low.tscn" id="1_5k6xf"]
 [ext_resource type="PackedScene" uid="uid://bl2nuu3qhlb5k" path="res://addons/godot-xr-tools/functions/movement_direct.tscn" id="1_m1arm"]
 [ext_resource type="Script" uid="uid://c82604t5mygdy" path="res://scn/player/player.gd" id="1_ufis8"]
-[ext_resource type="PackedScene" uid="uid://xqimcf20s2jp" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_fullglove_low.tscn" id="2_b8k3h"]
 [ext_resource type="PackedScene" uid="uid://b4ysuy43poobf" path="res://addons/godot-xr-tools/functions/function_pickup.tscn" id="2_tcdqb"]
 [ext_resource type="PackedScene" uid="uid://b6bk2pj8vbj28" path="res://addons/godot-xr-tools/functions/movement_turn.tscn" id="4_7kq1b"]
+[ext_resource type="PackedScene" uid="uid://b4kad2kuba1yn" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_hand_low.tscn" id="4_ufis8"]
 [ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="5_7kq1b"]
-[ext_resource type="Script" uid="uid://ck4yn3hxuobj7" path="res://addons/godot-xr-tools/player/player_body.gd" id="6_ufis8"]
+[ext_resource type="PackedScene" uid="uid://l2n30mpbkdyw" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_hand_low.tscn" id="7_pbaik"]
 
 [node name="Player" type="XROrigin3D" unique_id=1118128489]
 script = ExtResource("1_ufis8")
 
-[node name="PlayerBody" type="CharacterBody3D" parent="." unique_id=42147687 groups=["player_body"] instance=ExtResource("5_7kq1b")]
-process_priority = -100
-process_physics_priority = -100
-collision_layer = 524288
-collision_mask = 1023
-script = ExtResource("6_ufis8")
+[node name="PlayerBody" parent="." unique_id=42147687 instance=ExtResource("5_7kq1b")]
 
 [node name="Head" type="XRCamera3D" parent="." unique_id=1282443324]
 
@@ -25,7 +19,7 @@ script = ExtResource("6_ufis8")
 tracker = &"left_hand"
 pose = &"grip"
 
-[node name="LeftHand" parent="LeftHand" unique_id=930021823 instance=ExtResource("1_5k6xf")]
+[node name="LeftHand" parent="LeftHand" unique_id=369519545 instance=ExtResource("4_ufis8")]
 
 [node name="FunctionPickup" parent="LeftHand" unique_id=802075812 instance=ExtResource("2_tcdqb")]
 transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 0, 0)
@@ -37,7 +31,7 @@ strafe = true
 tracker = &"right_hand"
 pose = &"grip"
 
-[node name="RightHand" parent="RightHand" unique_id=1538299570 instance=ExtResource("2_b8k3h")]
+[node name="RightHand" parent="RightHand" unique_id=548045452 instance=ExtResource("7_pbaik")]
 
 [node name="FunctionPickup" parent="RightHand" unique_id=807668640 instance=ExtResource("2_tcdqb")]
 transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 0, 0)

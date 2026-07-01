@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://d2y6ia1iq4rtv"]
+
+[ext_resource type="Texture2D" uid="uid://v3rtmwgy3ub" path="res://assets/coconut/coconutHalf/coconut_3.png" id="1_m6jgl"]
+[ext_resource type="Script" uid="uid://bfrlpbsqg5lqr" path="res://addons/godot-xr-tools/objects/pickable.gd" id="1_nq4t0"]
+[ext_resource type="Texture2D" uid="uid://b5l8r73854m6i" path="res://assets/coconut/coconutHalf/coconut_5.png" id="2_nq4t0"]
+[ext_resource type="Texture2D" uid="uid://cyv4v4gsc6fgw" path="res://assets/coconut/coconutHalf/coconut_4.png" id="3_2b65d"]
+[ext_resource type="ArrayMesh" uid="uid://bflrh5bb7b1" path="res://assets/coconut/coconutHalf/coconutHalf.res" id="4_xs2d4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iu82i"]
+albedo_texture = ExtResource("1_m6jgl")
+roughness_texture = ExtResource("3_2b65d")
+normal_enabled = true
+normal_texture = ExtResource("2_nq4t0")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_m6jgl"]
+points = PackedVector3Array(-0.041614126, -0.041611146, -0.0030367947, 0.053752795, -0.032625064, 0.02011565, 0.023994563, 0.0036877792, -0.038285084, -0.06399374, 0.003996085, 0.023400001, -0.025855279, 0.024003725, -0.032752834, 0.055994127, 0.031981207, 0.023400001, 0.005814375, -0.061961308, 0.020383308, 0.0056400066, -0.045064837, -0.02374808, 0.020627847, 0.043135162, -0.021850863, -0.04171128, 0.04360897, 0.00077444693, 0.045073137, -0.0056240987, -0.023747656, -0.024018578, -0.022166178, -0.03461746, -0.048987772, 0.0018767252, -0.018132351, -0.039988644, -0.051986687, 0.021396477, 0.037903022, -0.037894323, -0.014378523, 0.0619954, -0.011988255, 0.023400001, -0.025307203, 0.05839426, 0.020551154, -0.0056343977, 0.045070086, -0.02374961, 0.037903305, 0.03789461, -0.014378551, 0.02217208, -0.024017656, -0.034616932, -0.0018585239, 0.0055608824, -0.042175535, -0.024432873, -0.05262095, -0.0030859278, 0.05644252, -0.0018739651, -0.0049574785, 0.003999805, 0.06398747, 0.023400001, -0.052668005, -0.02445213, -0.0030798654, 0.024751104, 0.05520074, 0.0046263407, 0.025280077, -0.05831722, 0.020510055, 0.0036915177, 0.023988323, -0.038285565, -0.052615013, 0.024427528, -0.0030874317, -0.04728639, 0.041606303, 0.021563489, 0.043135647, 0.020623012, -0.021851586, -0.0018715784, 0.05644527, -0.004956062)
+
+[node name="CoconutHalf" type="RigidBody3D" unique_id=1442899829]
+freeze = true
+script = ExtResource("1_nq4t0")
+metadata/_custom_type_script = "uid://bfrlpbsqg5lqr"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1146479734]
+transform = Transform3D(2.5, 0, 0, 0, -1.09278474e-07, 2.5, 0, -2.5, -1.09278474e-07, 0, 0.10988733, 0)
+material_override = SubResource("StandardMaterial3D_iu82i")
+mesh = ExtResource("4_xs2d4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1631579606]
+transform = Transform3D(2.5, 0, 0, 0, -1.09278474e-07, 2.5, 0, -2.5, -1.09278474e-07, 0, 0.10988733, 0)
+shape = SubResource("ConvexPolygonShape3D_m6jgl")
