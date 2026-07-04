@@ -53,5 +53,6 @@ anti_aliasing/quality/msaa_3d=2
 
 openxr/enabled=true
 openxr/foveation_level=3
+openxr/foveation_with_subsampled_images=false
 openxr/extensions/frame_synthesis=true
 shaders/enabled=true

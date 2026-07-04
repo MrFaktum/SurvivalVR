@@ -22,6 +22,7 @@ size = Vector3(0.01, 0.01, 0.01)
 script = ExtResource("1_ufis8")
 
 [node name="PlayerBody" parent="." unique_id=42147687 instance=ExtResource("5_7kq1b")]
+floor_max_angle = 0.9599311
 
 [node name="Head" type="XRCamera3D" parent="." unique_id=1282443324]
 
