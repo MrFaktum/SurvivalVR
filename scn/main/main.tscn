@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://c3o61xg5garho" path="res://scn/main/day_night_cycle.gd" id="1_y4fp4"]
 [ext_resource type="PackedScene" uid="uid://x6jl3rpbcy0u" path="res://scn/player/player.tscn" id="2_48jxh"]
-[ext_resource type="PackedScene" uid="uid://djhub8k1x5mx7" path="res://assets/russule/russule.tscn" id="3_ocixl"]
-[ext_resource type="PackedScene" uid="uid://d2y6ia1iq4rtv" path="res://assets/coconut/coconutHalf/coconut_half.tscn" id="4_1xxhc"]
-[ext_resource type="PackedScene" uid="uid://cns61f868yjmo" path="res://assets/coconut/coconutWhole/coconut_whole.tscn" id="5_64j2i"]
-[ext_resource type="PackedScene" uid="uid://cmvrrnevcxysj" path="res://assets/flyAgaric/flyAgaric.tscn" id="6_1xxhc"]
+[ext_resource type="PackedScene" uid="uid://djhub8k1x5mx7" path="res://scn/russule/russule.tscn" id="3_ocixl"]
+[ext_resource type="PackedScene" uid="uid://d2y6ia1iq4rtv" path="res://scn/coconutHalf/coconut_half.tscn" id="4_1xxhc"]
+[ext_resource type="PackedScene" uid="uid://cns61f868yjmo" path="res://scn/coconutWhole/coconut_whole.tscn" id="5_64j2i"]
+[ext_resource type="PackedScene" uid="uid://cmvrrnevcxysj" path="res://scn/flyAgaric/flyAgaric.tscn" id="6_1xxhc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_y4fp4"]
 

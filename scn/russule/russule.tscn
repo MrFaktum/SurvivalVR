@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bfrlpbsqg5lqr" path="res://addons/godot-xr-tools/objects/pickable.gd" id="1_s0hu1"]
 [ext_resource type="Texture2D" uid="uid://bfnnyx8m85yo8" path="res://assets/russule/russule_2.png" id="2_s0hu1"]
 [ext_resource type="Texture2D" uid="uid://ni6m2x7tc0pj" path="res://assets/russule/russule_1.png" id="3_iuvps"]
-[ext_resource type="ArrayMesh" uid="uid://s68ks3nq6gd0" path="res://assets/russule/russule.res" id="4_ao74u"]
+[ext_resource type="ArrayMesh" uid="uid://bn4615x1f8sc0" path="res://assets/russule/russule.res" id="4_ao74u"]
 [ext_resource type="Script" uid="uid://bq36ppo3qmjo" path="res://scripts/food_data.gd" id="6_iuvps"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wvhbo"]
