@@ -55,6 +55,7 @@ pose = &"grip"
 transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 0, 0)
 
 [node name="MovementDirect" parent="LeftHand" unique_id=1016819546 instance=ExtResource("1_m1arm")]
+max_speed = 9.0
 strafe = true
 
 [node name="RightHand" type="XRController3D" parent="." unique_id=172645602]

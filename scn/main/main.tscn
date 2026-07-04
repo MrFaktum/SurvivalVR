@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d2y6ia1iq4rtv" path="res://scn/coconutHalf/coconut_half.tscn" id="4_1xxhc"]
 [ext_resource type="PackedScene" uid="uid://cns61f868yjmo" path="res://scn/coconutWhole/coconut_whole.tscn" id="5_64j2i"]
 [ext_resource type="PackedScene" uid="uid://cmvrrnevcxysj" path="res://scn/flyAgaric/flyAgaric.tscn" id="6_1xxhc"]
+[ext_resource type="PackedScene" uid="uid://dsynruxuepkwr" path="res://scn/island/island.tscn" id="7_64j2i"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_y4fp4"]
 
@@ -19,73 +20,71 @@ ambient_light_source = 2
 ambient_light_color = Color(0.09803922, 0.09803922, 0.4392157, 1)
 ambient_light_energy = 1.4
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wvhbo"]
-albedo_color = Color(0.13333334, 0.54509807, 0.13333334, 1)
-
 [node name="Main" type="Node3D" unique_id=1243160325]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=946037588]
 environment = SubResource("Environment_lpmh6")
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=852944762]
-transform = Transform3D(0.7071067, -0.49999994, 0.49999994, 0, 0.7071067, 0.7071067, -0.7071067, -0.49999994, 0.49999994, 0, 0, 0)
+transform = Transform3D(0.70710677, -0.5, 0.5, 0, 0.70710677, 0.70710677, -0.70710677, -0.5, 0.5, 0, 12.392227, 0)
 shadow_enabled = true
+shadow_reverse_cull_face = true
+directional_shadow_mode = 1
+directional_shadow_blend_splits = true
 script = ExtResource("1_y4fp4")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=2145298981]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
-use_collision = true
-size = Vector3(20, 1, 20)
-material = SubResource("StandardMaterial3D_wvhbo")
-
 [node name="Player" parent="." unique_id=1118128489 instance=ExtResource("2_48jxh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.115817, 0)
 
 [node name="Test" type="Node3D" parent="." unique_id=1651375554]
 
 [node name="Russule" parent="Test" unique_id=668914891 instance=ExtResource("3_ocixl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6297574, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6297574, 3.1023405, 0)
 
 [node name="Russule2" parent="Test" unique_id=195539158 instance=ExtResource("3_ocixl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6297574, 0, -0.38992596)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6297574, 3.1023405, -0.38992596)
 
 [node name="Russule3" parent="Test" unique_id=199771606 instance=ExtResource("3_ocixl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6297574, 0, -0.78936934)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6297574, 3.1023405, -0.78936934)
 
 [node name="Russule4" parent="Test" unique_id=1693805817 instance=ExtResource("3_ocixl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6297574, 0, -1.1878557)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6297574, 3.1023405, -1.1878557)
 
 [node name="CoconutHalf" parent="Test" unique_id=1442899829 instance=ExtResource("4_1xxhc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.016887, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.016887, 3.1023405, 0)
 
 [node name="CoconutHalf2" parent="Test" unique_id=1031276176 instance=ExtResource("4_1xxhc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.016887, 0, -0.4304626)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.016887, 3.1023405, -0.4304626)
 
 [node name="CoconutHalf3" parent="Test" unique_id=1118375674 instance=ExtResource("4_1xxhc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.016887, 0, -0.8354609)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.016887, 3.1023405, -0.8354609)
 
 [node name="CoconutHalf4" parent="Test" unique_id=804243678 instance=ExtResource("4_1xxhc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.016887, 0, -1.2374582)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.016887, 3.1023405, -1.2374582)
 
 [node name="CoconutWhole" parent="Test" unique_id=1794778159 instance=ExtResource("5_64j2i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4487686, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4487686, 3.1023405, 0)
 
 [node name="CoconutWhole2" parent="Test" unique_id=28098435 instance=ExtResource("5_64j2i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4487686, 0, -0.44173288)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4487686, 3.1023405, -0.44173288)
 
 [node name="CoconutWhole3" parent="Test" unique_id=1947234709 instance=ExtResource("5_64j2i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4487686, 0, -0.9129076)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4487686, 3.1023405, -0.9129076)
 
 [node name="CoconutWhole4" parent="Test" unique_id=1420784159 instance=ExtResource("5_64j2i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4487686, 0, -1.2522346)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4487686, 3.1023405, -1.2522346)
 
 [node name="FlyAgaric2" parent="Test" unique_id=302876658 instance=ExtResource("6_1xxhc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3444568, 0, -0.23952577)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3444568, 3.1023405, -0.23952577)
 
 [node name="FlyAgaric3" parent="Test" unique_id=1542349899 instance=ExtResource("6_1xxhc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3444568, 0, -0.4610787)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3444568, 3.1023405, -0.4610787)
 
 [node name="FlyAgaric4" parent="Test" unique_id=549499380 instance=ExtResource("6_1xxhc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3444568, 0, -0.68882644)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3444568, 3.1023405, -0.68882644)
 
 [node name="FlyAgaric" parent="Test" unique_id=903399737 instance=ExtResource("6_1xxhc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3656933, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3656933, 3.1023405, 0)
+
+[node name="Island" parent="." unique_id=1663441141 instance=ExtResource("7_64j2i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9240303, 0.18322563, -356.9816)
