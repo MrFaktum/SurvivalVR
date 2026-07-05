@@ -28,7 +28,7 @@ floor_max_angle = 0.9599311
 
 [node name="Mouth" type="Area3D" parent="Head" unique_id=181268749]
 collision_layer = 0
-collision_mask = 7
+collision_mask = 65543
 script = ExtResource("3_ufis8")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Head/Mouth" unique_id=1730150991]
