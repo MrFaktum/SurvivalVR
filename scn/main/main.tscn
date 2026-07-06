@@ -34,7 +34,7 @@ directional_shadow_blend_splits = true
 script = ExtResource("1_y4fp4")
 
 [node name="Player" parent="." unique_id=1118128489 instance=ExtResource("2_48jxh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 
 [node name="Test" type="Node3D" parent="." unique_id=1651375554]
 

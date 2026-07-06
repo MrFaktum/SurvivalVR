@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bs4jabdpw7qin" path="res://assets/sea/sea_Normal.jpg" id="1_jvrtb"]
 [ext_resource type="Script" uid="uid://s4egtsp5jrev" path="res://scn/sea/sea_mesh_instance_3d.gd" id="4_eeshd"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i3u32"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ifow5"]
 transparency = 1
 albedo_color = Color(0.047058824, 0.31764707, 0.46666667, 0.5058824)
 roughness = 0.0
@@ -11,13 +11,14 @@ normal_enabled = true
 normal_texture = ExtResource("1_jvrtb")
 uv1_triplanar = true
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_qd0ah"]
-material = SubResource("StandardMaterial3D_i3u32")
+[sub_resource type="QuadMesh" id="QuadMesh_wvhbo"]
+material = SubResource("StandardMaterial3D_ifow5")
 size = Vector2(10000, 10000)
+orientation = 1
 
 [node name="Sea" type="Node3D" unique_id=1277764902]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=397899829]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.9311404, 0)
-mesh = SubResource("PlaneMesh_qd0ah")
+mesh = SubResource("QuadMesh_wvhbo")
 script = ExtResource("4_eeshd")

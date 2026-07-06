@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dncwfg0bw7uup"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_akaxv"]
+no_depth_test = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_64j2i"]
+material = SubResource("StandardMaterial3D_akaxv")
+
+[node name="ScreenEffect" type="Node3D" unique_id=2003094164]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1202844430]
+mesh = SubResource("QuadMesh_64j2i")

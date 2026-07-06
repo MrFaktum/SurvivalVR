@@ -430,7 +430,13 @@ func move_player(p_velocity: Vector3) -> Vector3:
 
 	# Get the player body location before we apply our movement.
 	var transform_before_movement : Transform3D = global_transform
-
+	
+	# Обычная скорость ходьбы от стика всегда больше 1.0 м/с.
+	# Если скорость меньше 1.5 — это физический шум выталкивания из склона.
+	if Vector2(velocity.x, velocity.z).length() < 1.5:
+		velocity.x = 0.0
+		velocity.z = 0.0
+	
 	move_and_slide()
 
 	if not _in_physics_movement:
