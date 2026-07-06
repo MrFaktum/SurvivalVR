@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://b4ysuy43poobf" path="res://addons/godot-xr-tools/functions/function_pickup.tscn" id="2_tcdqb"]
 [ext_resource type="Script" uid="uid://dhfjspc5ppxds" path="res://scn/player/mouth.gd" id="3_ufis8"]
 [ext_resource type="PackedScene" uid="uid://b6bk2pj8vbj28" path="res://addons/godot-xr-tools/functions/movement_turn.tscn" id="4_7kq1b"]
+[ext_resource type="PackedScene" uid="uid://dncwfg0bw7uup" path="res://scn/screenEffect/screen_effect.tscn" id="4_pbaik"]
 [ext_resource type="PackedScene" uid="uid://b4kad2kuba1yn" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_hand_low.tscn" id="4_ufis8"]
 [ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="5_7kq1b"]
 [ext_resource type="PackedScene" uid="uid://l2n30mpbkdyw" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_hand_low.tscn" id="7_pbaik"]
@@ -45,6 +46,8 @@ mesh = SubResource("BoxMesh_7kq1b")
 direction = Vector3(0, -1, -1)
 gravity = Vector3(0, -4, 0)
 initial_velocity_max = 1.5
+
+[node name="ScreenEffect" parent="Head" unique_id=2003094164 instance=ExtResource("4_pbaik")]
 
 [node name="LeftHand" type="XRController3D" parent="." unique_id=180315418]
 tracker = &"left_hand"

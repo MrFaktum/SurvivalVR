@@ -30,6 +30,11 @@ func _on_body_entered(body: Node3D):
 			print("Съедено! Голод: +", food_data.food_value, " Вода: +", food_data.water_value)
 			if food_data.poison_value > 0:
 				print("ОТРАВЛЕНИЕ! Урон: ", food_data.poison_value)
+				# Ищем экран (он лежит в Head)
+				var screen = get_parent().get_node("ScreenEffect/ScreenEffectMesh")
+				if screen:
+					# Запускаем зеленый ядовитый цвет на 3 секунды
+					screen.trigger_effect(Color(0.2, 0.8, 0.2), 3.0)
 				
 			# 4. Удаляем саму еду (корневой узел body)
 			body.queue_free()

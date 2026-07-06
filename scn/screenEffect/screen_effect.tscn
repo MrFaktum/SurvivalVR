@@ -1,12 +1,19 @@
 [gd_scene format=3 uid="uid://dncwfg0bw7uup"]
 
+[ext_resource type="Script" uid="uid://c5jrguny3u16j" path="res://scn/screenEffect/screen_effect_mesh.gd" id="1_bn5ls"]
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_akaxv"]
+transparency = 1
 no_depth_test = true
+shading_mode = 0
+albedo_color = Color(1, 1, 1, 0)
 
 [sub_resource type="QuadMesh" id="QuadMesh_64j2i"]
 material = SubResource("StandardMaterial3D_akaxv")
 
 [node name="ScreenEffect" type="Node3D" unique_id=2003094164]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1202844430]
+[node name="ScreenEffectMesh" type="MeshInstance3D" parent="." unique_id=1202844430]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1)
 mesh = SubResource("QuadMesh_64j2i")
+script = ExtResource("1_bn5ls")
