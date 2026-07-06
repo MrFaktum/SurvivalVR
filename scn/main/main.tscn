@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cns61f868yjmo" path="res://scn/coconutWhole/coconut_whole.tscn" id="5_64j2i"]
 [ext_resource type="PackedScene" uid="uid://cmvrrnevcxysj" path="res://scn/flyAgaric/flyAgaric.tscn" id="6_1xxhc"]
 [ext_resource type="PackedScene" uid="uid://dsynruxuepkwr" path="res://scn/island/island.tscn" id="7_64j2i"]
+[ext_resource type="PackedScene" uid="uid://b71u34ivd00fd" path="res://scn/poisonDartFrog/poison_dart_frog.tscn" id="7_akaxv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_y4fp4"]
 
@@ -85,6 +86,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3444568, 3.1023405, -0.6888
 
 [node name="FlyAgaric" parent="Test" unique_id=903399737 instance=ExtResource("6_1xxhc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3656933, 3.1023405, 0)
+
+[node name="PoisonDartFrog" parent="Test" unique_id=1954009440 instance=ExtResource("7_akaxv")]
+transform = Transform3D(-4.363752e-08, -0.058111668, -0.9983101, -2.5401419e-09, 0.9983101, -0.058111668, 1, 0, -4.371139e-08, 1.661, 1.7570213, 0)
 
 [node name="Island" parent="." unique_id=1663441141 instance=ExtResource("7_64j2i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9240303, 0.18322563, -356.9816)
