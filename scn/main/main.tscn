@@ -37,57 +37,57 @@ script = ExtResource("1_y4fp4")
 [node name="Player" parent="." unique_id=1118128489 instance=ExtResource("2_48jxh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 
-[node name="Test" type="Node3D" parent="." unique_id=1651375554]
+[node name="Objects" type="Node3D" parent="." unique_id=1651375554]
 
-[node name="Russule" parent="Test" unique_id=668914891 instance=ExtResource("3_ocixl")]
+[node name="Russule" parent="Objects" unique_id=668914891 instance=ExtResource("3_ocixl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6297574, 3.1023405, 0)
 
-[node name="Russule2" parent="Test" unique_id=195539158 instance=ExtResource("3_ocixl")]
+[node name="Russule2" parent="Objects" unique_id=195539158 instance=ExtResource("3_ocixl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6297574, 3.1023405, -0.38992596)
 
-[node name="Russule3" parent="Test" unique_id=199771606 instance=ExtResource("3_ocixl")]
+[node name="Russule3" parent="Objects" unique_id=199771606 instance=ExtResource("3_ocixl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6297574, 3.1023405, -0.78936934)
 
-[node name="Russule4" parent="Test" unique_id=1693805817 instance=ExtResource("3_ocixl")]
+[node name="Russule4" parent="Objects" unique_id=1693805817 instance=ExtResource("3_ocixl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6297574, 3.1023405, -1.1878557)
 
-[node name="CoconutHalf" parent="Test" unique_id=1442899829 instance=ExtResource("4_1xxhc")]
+[node name="CoconutHalf" parent="Objects" unique_id=1442899829 instance=ExtResource("4_1xxhc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.016887, 3.1023405, 0)
 
-[node name="CoconutHalf2" parent="Test" unique_id=1031276176 instance=ExtResource("4_1xxhc")]
+[node name="CoconutHalf2" parent="Objects" unique_id=1031276176 instance=ExtResource("4_1xxhc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.016887, 3.1023405, -0.4304626)
 
-[node name="CoconutHalf3" parent="Test" unique_id=1118375674 instance=ExtResource("4_1xxhc")]
+[node name="CoconutHalf3" parent="Objects" unique_id=1118375674 instance=ExtResource("4_1xxhc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.016887, 3.1023405, -0.8354609)
 
-[node name="CoconutHalf4" parent="Test" unique_id=804243678 instance=ExtResource("4_1xxhc")]
+[node name="CoconutHalf4" parent="Objects" unique_id=804243678 instance=ExtResource("4_1xxhc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.016887, 3.1023405, -1.2374582)
 
-[node name="CoconutWhole" parent="Test" unique_id=1794778159 instance=ExtResource("5_64j2i")]
+[node name="CoconutWhole" parent="Objects" unique_id=1794778159 instance=ExtResource("5_64j2i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4487686, 3.1023405, 0)
 
-[node name="CoconutWhole2" parent="Test" unique_id=28098435 instance=ExtResource("5_64j2i")]
+[node name="CoconutWhole2" parent="Objects" unique_id=28098435 instance=ExtResource("5_64j2i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4487686, 3.1023405, -0.44173288)
 
-[node name="CoconutWhole3" parent="Test" unique_id=1947234709 instance=ExtResource("5_64j2i")]
+[node name="CoconutWhole3" parent="Objects" unique_id=1947234709 instance=ExtResource("5_64j2i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4487686, 3.1023405, -0.9129076)
 
-[node name="CoconutWhole4" parent="Test" unique_id=1420784159 instance=ExtResource("5_64j2i")]
+[node name="CoconutWhole4" parent="Objects" unique_id=1420784159 instance=ExtResource("5_64j2i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4487686, 3.1023405, -1.2522346)
 
-[node name="FlyAgaric2" parent="Test" unique_id=302876658 instance=ExtResource("6_1xxhc")]
+[node name="FlyAgaric2" parent="Objects" unique_id=302876658 instance=ExtResource("6_1xxhc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3444568, 3.1023405, -0.23952577)
 
-[node name="FlyAgaric3" parent="Test" unique_id=1542349899 instance=ExtResource("6_1xxhc")]
+[node name="FlyAgaric3" parent="Objects" unique_id=1542349899 instance=ExtResource("6_1xxhc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3444568, 3.1023405, -0.4610787)
 
-[node name="FlyAgaric4" parent="Test" unique_id=549499380 instance=ExtResource("6_1xxhc")]
+[node name="FlyAgaric4" parent="Objects" unique_id=549499380 instance=ExtResource("6_1xxhc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3444568, 3.1023405, -0.68882644)
 
-[node name="FlyAgaric" parent="Test" unique_id=903399737 instance=ExtResource("6_1xxhc")]
+[node name="FlyAgaric" parent="Objects" unique_id=903399737 instance=ExtResource("6_1xxhc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3656933, 3.1023405, 0)
 
-[node name="PoisonDartFrog" parent="Test" unique_id=1954009440 instance=ExtResource("7_akaxv")]
+[node name="PoisonDartFrog" parent="Objects" unique_id=1954009440 instance=ExtResource("7_akaxv")]
 transform = Transform3D(-4.363752e-08, -0.058111668, -0.9983101, -2.5401419e-09, 0.9983101, -0.058111668, 1, 0, -4.371139e-08, 1.661, 1.7570213, 0)
 
 [node name="Island" parent="." unique_id=1663441141 instance=ExtResource("7_64j2i")]

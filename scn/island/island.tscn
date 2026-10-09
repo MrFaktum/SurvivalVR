@@ -121,10 +121,6 @@ transform = Transform3D(0.90614593, -0.41935825, 0.055120755, 0.42121267, 0.8828
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 34.980858, 0)
 multimesh = SubResource("MultiMesh_woktd")
 
-[node name="Bush" type="MeshInstance3D" parent="." unique_id=126135717]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
-mesh = SubResource("ArrayMesh_woktd")
-
 [node name="Trees" type="Node3D" parent="." unique_id=424673463]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.207063, 302.84308)
 

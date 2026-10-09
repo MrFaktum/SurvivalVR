@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cm7b1lncitucq"]
+
+[ext_resource type="PackedScene" uid="uid://bxfmxby54dlne" path="res://assets/poisonDartFrog/poison_dart_frog_with_animation.glb" id="1_t2cqi"]
+
+[node name="PoisonDartFrogTexture" unique_id=293204640 instance=ExtResource("1_t2cqi")]
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=82678561]
+autoplay = &"Animation"
