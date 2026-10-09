@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b71u34ivd00fd"]
 
+[ext_resource type="PackedScene" uid="uid://cw7a5h5h7qfdl" path="res://assets/poisonDartFrog/poison_dart_frog_texture.tscn" id="1_dpdh5"]
 [ext_resource type="Script" uid="uid://jk52d0iu50wp" path="res://scn/poisonDartFrog/poison_frog.gd" id="1_nhksd"]
-[ext_resource type="PackedScene" uid="uid://cm7b1lncitucq" path="res://assets/poisonDartFrog/poison_dart_frog_texture.tscn" id="2_dpdh5"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ifow5"]
 radius = 0.046875
@@ -13,12 +13,12 @@ height = 0.213
 
 [node name="PoisonDartFrog" type="Node3D" unique_id=1954009440]
 
+[node name="PoisonDartFrogTexture" parent="." unique_id=564047163 instance=ExtResource("1_dpdh5")]
+
 [node name="Area3D" type="Area3D" parent="." unique_id=1480685825]
 collision_layer = 0
 collision_mask = 589824
 script = ExtResource("1_nhksd")
-
-[node name="PoisonDartFrogTexture" parent="Area3D" unique_id=293204640 instance=ExtResource("2_dpdh5")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1556654794]
 transform = Transform3D(1, 0, 0, 0, 0.43634203, -0.89978087, 0, 0.89978087, 0.43634203, 0, 0.07266156, 0.00016303896)
